@@ -1,0 +1,36 @@
+{
+  "name": "genpark-swarm-deadlock-detector-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Swarm resource deadlock detector constructing Wait-For-Graphs to detect circular dependencies and trigger minimal-cost agent preemption.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "multi-agent-orchestration",
+  "tags": [
+    "deadlock-detection",
+    "swarm-coordination",
+    "wait-for-graph",
+    "cycle-detection",
+    "preemption-recovery"
+  ],
+  "inputs": {
+    "swarm_agents": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "detection_id": {
+      "type": "string"
+    },
+    "deadlock_detected": {
+      "type": "boolean"
+    },
+    "preemption_target_agent": {
+      "type": "string"
+    },
+    "swarm_liveness_score": {
+      "type": "number"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
